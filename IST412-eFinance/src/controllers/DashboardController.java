@@ -5,10 +5,21 @@
  */
 package controllers;
 
-/**
- *
- * @author Jared
- */
+// @author Slade
+
 public class DashboardController {
     
+    public DashboardController() {
+    
 }
+    
+    public void openCustomerDashboard() {
+    
+}
+    
+    public void openEmployeeDashboard() {
+        
+    }
+
+}
+
