@@ -5,10 +5,61 @@
  */
 package controllers;
 
-/**
- *
- * @author Jared
- */
+import java.awt.Button;
+import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Scanner;
+import javax.swing.JLabel;
+import models.Customer;
+
 public class PersonalInfoProfileController {
+
+    Customer currentUser;
+
+    public void initData(Customer customer) {
+        currentUser = customer;
+
+    }
+
+    public void signOut(ActionEvent event) throws IOException {
+        /*
+            On button click, user sign out
+         */
+    }
+
+    public ArrayList<Object> viewStatement(Customer customer, double loanAmount, double interestRate) {
+        ArrayList<Object> statement = new ArrayList();
+        for (int i = 0; i < statement.size(); i++) {
+            statement.add(customer.getEmail() + customer.getLastName() + customer.getLoanAmount()
+                    + customer.getLoanAmount());
+        }
+        return statement;
+    }
+
+    public void updateEmail(Customer customer) {
+        System.out.println("Enter New Email.");
+
+        Scanner scanner = new Scanner(System.in);
+        customer.setEmail(scanner.nextLine());
+
+    }
+
+    public void updatePassword(Customer customer) {
+        System.out.println("Enter New Password.");
+
+        Scanner scanner = new Scanner(System.in);
+        customer.setPassword(scanner.nextLine());
+
+    }
     
+    public void updateSSN(Customer customer){
+        System.out.println("Enter SSN.");
+
+        Scanner scanner = new Scanner(System.in);
+        customer.setSsn(scanner.nextInt());
+    }
+
 }

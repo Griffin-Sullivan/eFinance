@@ -5,10 +5,34 @@
  */
 package views;
 
-/**
- *
- * @author Jared
- */
+import java.awt.Button;
+import java.awt.TextField;
+import javax.swing.JLabel;
+
 public class PersonalInfoView {
-    
+
+    private Button applyForLoan;
+    private Button signOut;
+    private JLabel firstNameLabel;
+    private JLabel lastNameLabel;
+    private TextField firstName;
+    private TextField lastName;
+    private JLabel loanAmount;
+    private JLabel interestRate;
+
+    public void signOut() {
+        /*
+            Assign Button Mapping
+        */
+    }
+    public void viewStatement(){
+        /*
+            Asssign Button Mapping
+        */
+    }
+    public void updateProfile(){
+        /*
+            Assign Button Mapping
+        */
+    }
 }
