@@ -7,6 +7,7 @@ package models;
 
 import java.util.HashMap;
 import java.util.Map;
+import models.Customer;
 
 /**
  *
@@ -18,6 +19,7 @@ public class ATZFinance {
     private final FederalReserve federalReserve;
     private final Map<String, Double> currencyExchange;
     private HashMap<String,Loan> loans;
+    private Customer testUser;
 
     public ATZFinance(FederalReserve federalReserve, Map<String, Double> currencyExchange) {
         this.federalReserve = federalReserve;

@@ -5,30 +5,50 @@
  */
 package controllers;
 
-import views.CustomerDashboard;
-import views.EmployeeDashboard;
-import views.LoginView;
-
 /**
  *
  * @author Slade
  */
 public class Controller {
-    private final CustomerDashboard customerView;
-    private final EmployeeDashboard employeeView;
-    private final LoginView loginView;
-    
-    //More initialization goes here. As of right now, it does not allow us to.
-    
-    public Controller() {
-        customerView = new CustomerDashboard();
-        employeeView = new EmployeeDashboard();
-        loginView = new LoginView();
-        
-        //Once they are properly created, the views will be set to visible
-    }
-    
+
+    private DashboardController dashboardController;
+    private LoanController loanController;
+    private LoginRegisterController loginRegisterController;
+    private PersonalInfoProfileController personalInfoProfileController;
+
+
+
     //Setting the variables goes here
-    
-    
+    public DashboardController getDashboardController() {
+        return dashboardController;
+    }
+
+    public LoanController getLoanController() {
+        return loanController;
+    }
+
+    public LoginRegisterController getLoanRegisterController() {
+        return loginRegisterController;
+    }
+
+    public PersonalInfoProfileController getPersonalInfoProfileController() {
+        return personalInfoProfileController;
+    }
+
+    public void setDashboardController(DashboardController tempDash) {
+        this.dashboardController = tempDash;
+    }
+
+    public void setLoanController(LoanController tempLoan) {
+        this.loanController = tempLoan;
+    }
+
+    public void setLoginRegisterController(LoginRegisterController tempLoginRegister) {
+        this.loginRegisterController = tempLoginRegister;
+    }
+
+    public void setPersonalInfoProfileController(PersonalInfoProfileController tempPip) {
+        this.personalInfoProfileController = tempPip;
+    }
+
 }

@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import javax.swing.JLabel;
 import models.Customer;
+import models.Loan;
 
 public class PersonalInfoProfileController {
 
@@ -30,11 +31,11 @@ public class PersonalInfoProfileController {
          */
     }
 
-    public ArrayList<Object> viewStatement(Customer customer, double loanAmount, double interestRate) {
+    public ArrayList<Object> viewStatement(Customer customer, Loan loan) {
         ArrayList<Object> statement = new ArrayList();
         for (int i = 0; i < statement.size(); i++) {
-            statement.add(customer.getEmail() + customer.getLastName() + customer.getLoanAmount()
-                    + customer.getLoanAmount());
+            statement.add(customer.getEmail() + customer.getLastName() + loan.getLoanAmount()
+                    + loan.getLoanAmount());
         }
         return statement;
     }
