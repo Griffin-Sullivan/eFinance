@@ -5,10 +5,29 @@
  */
 package views;
 
+import controllers.LoanController;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Jared
  */
 public class LoanApplicationView {
+    private JTextField firstNameField;
+    private JTextField lastNameField;
+    private JTextField desiredLoanAmountField;
+    private JTextField desiredInterestField;
+    private JTextField bankInfoField;
+    private JButton submitButton;
+    private LoanController loanController;
+    
+    public void submitApplication() {
+        loanController.submitApplication(firstNameField.getText(), lastNameField.getText(),
+                desiredLoanAmountField.getText(), desiredInterestField.getText(), bankInfoField.getText());
+    }
+    
+    
+    
     
 }

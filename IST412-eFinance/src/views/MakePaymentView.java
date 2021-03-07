@@ -5,10 +5,22 @@
  */
 package views;
 
+import controllers.LoanController;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Jared
  */
 public class MakePaymentView {
+    private JLabel loanAmountLabel;
+    private JTextField payInput;
+    private JButton submitPayment;
+    private LoanController loanController;
     
+    public void submitPayment() {
+        loanController.submitPayment(1000.00, "123");
+    }
 }

@@ -10,8 +10,7 @@ public class Customer {
     private int age;
     private int ssn;
     private double income;
-    private double loanAmount;
-    private double interestRate;
+    private Loan loan;
     private String email;
     private String password;
 
@@ -60,36 +59,10 @@ public class Customer {
         return income;
     }
     
-    /** Gets customer's loan amount
-    */
-    public double getLoanAmount() {
-        return loanAmount;
-    }
-
-    /** Gets customer's interest rate on their loan
-    */
-    public double getInterestRate() {
-        return interestRate;
-    }
-
     /** Gets customer's email
     */
     public String getEmail() {
         return email;
-    }
-    
-    /** Sets the customer's loan amount
-     * @param loanAmount The customer's loan amount
-    */
-    public void setLoanAmount(double loanAmount) {
-        this.loanAmount = loanAmount;
-    }
-
-    /** Sets the customer's interest rate on their loan
-     * @param interestRate The customer's loan interest rate
-    */
-    public void setInterestRate(double interestRate) {
-        this.interestRate = interestRate;
     }
     
     /** Sets the customer's email
@@ -134,5 +107,8 @@ public class Customer {
         return true;
     }
     
-    
+    public Loan getLoan(String loanId) {
+        ATZFinance bank = new ATZFinance();
+        return bank.getLoan(loanId);
+    }
 }

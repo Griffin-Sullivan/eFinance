@@ -5,10 +5,23 @@
  */
 package views;
 
+import controllers.LoanController;
+import javax.swing.JLabel;
+
 /**
  *
  * @author Jared
  */
 public class LoanInfoView {
+    private JLabel loanAmountLabel;
+    private JLabel interestLabel;
+    private JLabel loanId;
+    private LoanController loanController;
+    
+    public void displayLoanInfo() {
+        loanController.displayLoanInfo("123");
+        // use loan to get info needed to display in JLabels
+    }
+    
     
 }
