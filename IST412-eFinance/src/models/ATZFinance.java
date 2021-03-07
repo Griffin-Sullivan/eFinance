@@ -17,21 +17,23 @@ import models.Customer;
 public class ATZFinance {
  
     private final FederalReserve federalReserve;
-    private final Map<String, Double> currencyExchange;
+    private final HashMap<String, Double> currencyExchange;
     private HashMap<String,Loan> loans;
     private Customer testUser;
+    
 
-    public ATZFinance(FederalReserve federalReserve, Map<String, Double> currencyExchange) {
-        this.federalReserve = federalReserve;
-        this.currencyExchange = currencyExchange;
-    }
-
-    ATZFinance() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ATZFinance() {
+        federalReserve = new FederalReserve();
+        currencyExchange = new HashMap<>();
+        loans = new HashMap<>();
     }
     
     public double getMaximumLoanAmount() {
         throw new UnsupportedOperationException("Not yet implemented.");
+    }
+    
+    public void addTestLoans() {
+        loans.put("123", new Loan(10000.00, "joe", "shmoe", "123", 4.5));
     }
     
     public Loan getLoan(String id) {

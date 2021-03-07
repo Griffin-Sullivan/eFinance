@@ -9,10 +9,10 @@ public class Loan {
     private Double loanAmount;
     private String firstName;
     private String lastName;
-    private int id;
+    private String id;
     private Double interestRate;
 
-    public Loan(Double loanAmount, String firstName, String lastName, int id, Double interestRate) {
+    public Loan(Double loanAmount, String firstName, String lastName, String id, Double interestRate) {
         this.loanAmount = loanAmount;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -24,7 +24,7 @@ public class Loan {
         return loanAmount;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 

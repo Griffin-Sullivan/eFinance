@@ -13,6 +13,7 @@ public class Customer {
     private Loan loan;
     private String email;
     private String password;
+    private ATZFinance bank;
 
     /** Creates a new customer
      * @param firstName The customer's first name
@@ -21,12 +22,13 @@ public class Customer {
      * @param email The customer's email
      * @param password The customer's password
     */
-    public Customer(String firstName, String lastName, int age, String email, String password) {
+    public Customer(String firstName, String lastName, int age, String email, String password, ATZFinance bank) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.email = email;
         this.password = password;
+        this.bank = bank;
     }
     
     /** Gets customer's first name
@@ -108,7 +110,6 @@ public class Customer {
     }
     
     public Loan getLoan(String loanId) {
-        ATZFinance bank = new ATZFinance();
         return bank.getLoan(loanId);
     }
 }

@@ -21,6 +21,6 @@ public class MakePaymentView {
     private LoanController loanController;
     
     public void submitPayment() {
-        loanController.submitPayment(1000.00, "123");
+
     }
 }

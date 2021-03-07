@@ -19,7 +19,6 @@ public class LoanController {
     private MakePaymentView paymentView;
     private LoanInfoView loanInfoView;
     private LoanApplicationView loanApplicationView;
-    private Customer user;
 
     public LoanController(MakePaymentView paymentView, LoanInfoView loanInfoView, LoanApplicationView loanApplicationView) {
         this.paymentView = paymentView;
@@ -28,15 +27,15 @@ public class LoanController {
     }
     
     public void submitApplication(String firstName, String lastName, String desiredLoanAmount, String desiredInterest, String bankInfo) {
+        System.out.println("Application submitted");
+    }
+    
+    public Loan displayLoanInfo(Customer customer, String loanId) {
+        return customer.getLoan(loanId);
+    }
+    
+    public void submitPayment(Customer customer, Double amount, String loanId) {
+        customer.getLoan(loanId).makePayment(amount);
+    }
         
-    }
-    
-    public Loan displayLoanInfo(String loanId) {
-        return user.getLoan(loanId);
-    }
-    
-    public void submitPayment(Double amount, String loanId) {
-        user.getLoan(loanId).makePayment(amount);
-    }
-    
 }
