@@ -14,6 +14,7 @@ import views.MakePaymentView;
 import views.PersonalInfoView;
 import views.PersonalInfoView;
 import views.RegistrationView;
+import views.LoginView;
 
 public class TestHarness {
 
