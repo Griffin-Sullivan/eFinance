@@ -17,11 +17,11 @@ public class LoginRegisterController {
     private void openEmployeeDashboard() {
     }
 
-    private void addNewCustomer(String email, String password, String firstName, String lastName, int age) {
+    public void addNewCustomer(String email, String password, String firstName, String lastName, int age) {
         System.out.println("Registration successful! New customer added. " + firstName + lastName + age + email + password);
     }
 
-    private void authenticate(String email, String password) {
+    public void authenticate(String email, String password) {
         System.out.println(email + "Has been authenticated.");
     }
 }
