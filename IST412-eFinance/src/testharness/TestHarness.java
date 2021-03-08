@@ -2,6 +2,7 @@ package testharness;
 
 import controllers.Controller;
 import controllers.LoanController;
+import controllers.LoginRegisterController;
 import controllers.PersonalInfoProfileController;
 import models.ATZFinance;
 import models.Customer;
@@ -11,6 +12,8 @@ import views.LoanApplicationView;
 import views.LoanInfoView;
 import views.MakePaymentView;
 import views.PersonalInfoView;
+import views.PersonalInfoView;
+import views.RegistrationView;
 
 public class TestHarness {
 
@@ -98,7 +101,29 @@ public class TestHarness {
             System.out.println(e);
             System.out.println("FAILURE");
         }
-        
+                //LoginRegister controller tests
+        LoginView loginView = new LoginView();
+        RegistrationView registerView = new RegistrationView();
+
+        controller.setLoginRegisterController(new LoginRegisterController(loginView, registerView));
+
+        System.out.println("------Running LoginRegisterController Tests------");
+        System.out.println("Add New Customer Test:");
+        try {
+            controller.getLoginRegisterController().addNewCustomer("johnsmith@gmail.com", "password", "john", "smith", 35);
+            System.out.println("SUCCESS");
+        } catch (Exception e) {
+            System.out.println(e);
+            System.out.println("FAILURE");
+        }
+        System.out.println("Authenticate User Test:");
+        try {
+            controller.getLoginRegisterController().authenticate("johnsmith@gmail.com", "password");
+            System.out.println("SUCCESS");
+        } catch (Exception e) {
+            System.out.println(e);
+            System.out.println("FAILURE");
+        }
         
     }
 }
