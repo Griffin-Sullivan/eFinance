@@ -1,8 +1,13 @@
 package controllers;
 
 public class LoginRegisterController {
+    
+    private LoginView loginView;
+    private RegistrationView registerView;
 
-    public LoginRegisterController() {
+    public LoginRegisterController(LoginView loginView, RegistrationView registerView) {
+        this.loginView = loginView;
+        this.registerView = registerView;
     }
 
     private void openLoginView() {
