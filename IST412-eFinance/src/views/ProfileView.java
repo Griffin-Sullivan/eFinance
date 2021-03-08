@@ -10,5 +10,7 @@ package views;
  * @author Jared
  */
 public class ProfileView {
-    
+    /*
+        Delete Class
+    */
 }
