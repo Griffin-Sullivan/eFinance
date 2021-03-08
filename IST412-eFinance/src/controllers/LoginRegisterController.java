@@ -1,5 +1,8 @@
 package controllers;
 
+import views.LoginView;
+import views.RegistrationView;
+
 public class LoginRegisterController {
     
     private LoginView loginView;
