@@ -101,7 +101,7 @@ public class TestHarness {
             System.out.println(e);
             System.out.println("FAILURE");
         }
-                //LoginRegister controller tests
+        //LoginRegister controller tests
         LoginView loginView = new LoginView();
         RegistrationView registerView = new RegistrationView();
 
