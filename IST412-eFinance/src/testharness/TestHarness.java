@@ -1,6 +1,7 @@
 package testharness;
 
 import controllers.Controller;
+import controllers.DashboardController;
 import controllers.LoanController;
 import controllers.LoginRegisterController;
 import controllers.PersonalInfoProfileController;
@@ -8,6 +9,8 @@ import models.ATZFinance;
 import models.Customer;
 import models.Employee;
 import models.Loan;
+import views.CustomerDashboard;
+import views.EmployeeDashboard;
 import views.LoanApplicationView;
 import views.LoanInfoView;
 import views.MakePaymentView;
@@ -42,7 +45,7 @@ public class TestHarness {
             System.out.println(e);
             System.out.println("FAILURE");
         }
-
+        
         System.out.println("Submit Loan Application:");
         try {
             controller.getLoanController().submitApplication(testUser.getFirstName(), testUser.getLastName(),
@@ -123,6 +126,33 @@ public class TestHarness {
             controller.getLoginRegisterController().authenticate("johnsmith@gmail.com", "password");
             System.out.println("SUCCESS");
         } catch (Exception e) {
+            System.out.println(e);
+            System.out.println("FAILURE");
+        }
+        
+        // DashboardController tests
+        CustomerDashboard customerDashboard = new CustomerDashboard();
+        EmployeeDashboard employeeDashboard = new EmployeeDashboard();
+
+        controller.setDashboardController(new DashboardController(customerDashboard, employeeDashboard));
+
+        System.out.println("------Running DashboardController Tests------");
+        //this runs a test for the display message for the Customer to see
+        System.out.println("Welcome Message for Customer Test:");
+        try{
+            System.out.println(controller.getDashboardController().welcomeCustomerMessage(testUser));
+            System.out.println("SUCCESS");
+        }catch(Exception e){
+            System.out.println(e);
+            System.out.println("FAILURE");
+        }
+        
+        //this runs a test for the display message that an employee will see
+        System.out.println("Welcome Message for Employee Test:");
+        try{
+            System.out.println(controller.getDashboardController().welcomeEmployeeMessage(testEmployee));
+            System.out.println("SUCCESS");
+        }catch(Exception e){
             System.out.println(e);
             System.out.println("FAILURE");
         }
