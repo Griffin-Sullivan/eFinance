@@ -15,18 +15,27 @@ import models.Customer;
  * @author Dutt
  */
 public class ATZFinance {
- 
+    
+    private static ATZFinance single_instance=null;
     private final FederalReserve federalReserve;
     private final HashMap<String, Double> currencyExchange;
     private HashMap<String,Loan> loans;
     private Customer testUser;
     
 
-    public ATZFinance() {
+    private ATZFinance() {
         federalReserve = new FederalReserve();
         currencyExchange = new HashMap<>();
         loans = new HashMap<>();
     }
+    
+    public static ATZFinance getInstance() 
+    { 
+        if (single_instance == null) 
+            single_instance = new ATZFinance(); 
+  
+        return single_instance; 
+    } 
     
     public double getMaximumLoanAmount() {
         throw new UnsupportedOperationException("Not yet implemented.");

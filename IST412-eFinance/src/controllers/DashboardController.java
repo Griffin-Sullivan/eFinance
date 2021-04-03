@@ -7,18 +7,32 @@ package controllers;
 
 // @author Slade
 
-public class DashboardController {
+import eFinance.Main;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+
+
+public class DashboardController implements Initializable {
+    private Main application;
     
-    public DashboardController() {
+    @FXML
+    Button submitButton;
     
-}
     
-    public void openCustomerDashboard() {
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }
     
-}
+    public void setApp(Main application){
+        this.application = application;
+    }
     
-    public void openEmployeeDashboard() {
-        
+    public void apply() {
+        // go to apply for loan page
     }
 
 }

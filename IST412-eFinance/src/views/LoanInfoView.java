@@ -19,7 +19,6 @@ public class LoanInfoView {
     private LoanController loanController;
     
     public void displayLoanInfo() {
-        loanController.displayLoanInfo("123");
         // use loan to get info needed to display in JLabels
     }
     

@@ -12,7 +12,7 @@ import views.MakePaymentView;
 public class TestHarness {
 
     public static void main(String[] args) {
-        ATZFinance bank = new ATZFinance();
+        ATZFinance bank = ATZFinance.getInstance();
         Customer testUser = new Customer("john", "smith", 35, "johnsmith@gmail.com", "password", bank);
         Employee testEmployee = new Employee("joework", "password", "joework@gmail.com");
         Controller controller = new Controller();
@@ -53,7 +53,6 @@ public class TestHarness {
             controller.getLoanController().submitPayment(testUser, 200.00, "123");
             double amountAfter = testUser.getLoan("123").getLoanAmount();
             if (amountBefore > amountAfter) {
-                System.out.println(amountBefore + " " + amountAfter);
                 System.out.println("SUCCESS");
             } else {
                 System.out.println("FAILURE");

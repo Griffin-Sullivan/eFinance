@@ -1,27 +1,50 @@
 package controllers;
 
-public class LoginRegisterController {
+import eFinance.Main;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 
-    public LoginRegisterController() {
+public class LoginRegisterController implements Initializable{
+    private Main application;
+    
+    @FXML
+    TextField username;
+    @FXML
+    TextField password;
+    @FXML
+    Text usernameHelp;
+    @FXML
+    Text passwordHelp;
+    
+    
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
     }
-
-    private void openLoginView() {
-    }
-
-    private void openRegistrationView() {
-    }
-
-    private void openCustomerDashboard() {
-    }
-
-    private void openEmployeeDashboard() {
+    
+    public void setApp(Main application){
+        this.application = application;
     }
 
     private void addNewCustomer(String email, String password, String firstName, String lastName, int age) {
         System.out.println("Registration successful! New customer added. " + firstName + lastName + age + email + password);
     }
 
-    private void authenticate(String email, String password) {
-        System.out.println(email + "Has been authenticated.");
+    public void authenticate() {
+        if (!username.getText().equals("username")) {
+            usernameHelp.setText("Invalid username");
+        }
+        if (!password.getText().equals("password")) {
+            passwordHelp.setText("Invalid password");
+        }
+        if (password.getText().equals("password") && username.getText().equals("username")) {
+            usernameHelp.setText("");
+            passwordHelp.setText("");
+            application.goToCustomerDashboard();
+        }
     }
 }
