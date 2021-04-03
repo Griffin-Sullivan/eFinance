@@ -67,6 +67,10 @@ public class Customer {
         return email;
     }
     
+    public String getPassword(){
+        return password;
+    }
+    
     /** Sets the customer's email
      * @param email The customer's email
     */

@@ -11,28 +11,54 @@ import javax.swing.JLabel;
 
 public class PersonalInfoView {
 
-    private Button applyForLoan;
+    
     private Button signOut;
-    private JLabel firstNameLabel;
-    private JLabel lastNameLabel;
-    private TextField firstName;
-    private TextField lastName;
+    private Button displayInfo;
+    private Button viewStatement;
+    private Button updateEmail;
+    private Button updatePassword;
+    private Button updateSSN;
+    
+    private JLabel emailLabel;
+    private JLabel passwordLabel;
+    
+    private TextField email;
+    private TextField password;
+    
     private JLabel loanAmount;
     private JLabel interestRate;
 
     public void signOut() {
         /*
             Assign Button Mapping
-        */
+         */
     }
-    public void viewStatement(){
+
+    public void displayInfo() {
         /*
             Asssign Button Mapping
-        */
+         */
     }
-    public void updateProfile(){
+
+    public void viewStatement() {
+        /*
+            Asssign Button Mapping
+         */
+    }
+
+    public void updateEmail() {
         /*
             Assign Button Mapping
-        */
+         */
     }
+    public void updatePassword() {
+        /*
+            Assign Button Mapping
+         */
+    }
+    public void updateSSN() {
+        /*
+            Assign Button Mapping
+         */
+    }       
 }

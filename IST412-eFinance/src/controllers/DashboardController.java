@@ -34,6 +34,4 @@ public class DashboardController implements Initializable {
     public void apply() {
         // go to apply for loan page
     }
-
 }
-

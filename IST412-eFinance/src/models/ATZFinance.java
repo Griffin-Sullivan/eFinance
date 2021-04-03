@@ -6,8 +6,6 @@
 package models;
 
 import java.util.HashMap;
-import java.util.Map;
-import models.Customer;
 
 /**
  *
@@ -20,6 +18,7 @@ public class ATZFinance {
     private final FederalReserve federalReserve;
     private final HashMap<String, Double> currencyExchange;
     private HashMap<String,Loan> loans;
+    private HashMap<String,LoanApplication> applications;
     private Customer testUser;
     
 
@@ -47,5 +46,13 @@ public class ATZFinance {
     
     public Loan getLoan(String id) {
         return loans.get(id);
+    }
+    
+    public LoanApplication getLoanApplication(String id) {
+        return applications.get(id);
+    }
+    
+    public void addLoanApplication(LoanApplication application) {
+        applications.put(application.getApplicationId(), application);
     }
 }

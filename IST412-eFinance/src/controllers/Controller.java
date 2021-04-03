@@ -27,7 +27,7 @@ public class Controller {
         return loanController;
     }
 
-    public LoginRegisterController getLoanRegisterController() {
+    public LoginRegisterController getLoginRegisterController() {
         return loginRegisterController;
     }
 

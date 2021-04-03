@@ -24,7 +24,7 @@ import java.awt.*;
          * @param applicationStatus
          */
         private void customerView(String firstName, String lastName, String customerInfo, String applicationStatus) {
-
+            
         }
 
         /** Loan application process page

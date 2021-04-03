@@ -30,7 +30,7 @@ public class LoginRegisterController implements Initializable{
         this.application = application;
     }
 
-    private void addNewCustomer(String email, String password, String firstName, String lastName, int age) {
+    public void addNewCustomer(String email, String password, String firstName, String lastName, int age) {
         System.out.println("Registration successful! New customer added. " + firstName + lastName + age + email + password);
     }
 
