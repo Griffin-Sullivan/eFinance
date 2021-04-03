@@ -23,8 +23,8 @@ public class LoanApplicationView {
     private LoanController loanController;
     
     public void submitApplication() {
-        loanController.submitApplication(firstNameField.getText(), lastNameField.getText(),
-                desiredLoanAmountField.getText(), desiredInterestField.getText(), bankInfoField.getText());
+  //     loanController.submitApplication(firstNameField.getText(), lastNameField.getText(),
+   //             desiredLoanAmountField.getText(), desiredInterestField.getText(), bankInfoField.getText());
     }
     
     

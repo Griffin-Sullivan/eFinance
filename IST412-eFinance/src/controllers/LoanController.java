@@ -5,37 +5,30 @@
  */
 package controllers;
 
-import models.Customer;
-import models.Loan;
-import views.LoanApplicationView;
-import views.LoanInfoView;
-import views.MakePaymentView;
+import eFinance.Main;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.fxml.Initializable;
 
 /**
  *
  * @author Jared
  */
-public class LoanController {
-    private MakePaymentView paymentView;
-    private LoanInfoView loanInfoView;
-    private LoanApplicationView loanApplicationView;
-
-    public LoanController(MakePaymentView paymentView, LoanInfoView loanInfoView, LoanApplicationView loanApplicationView) {
-        this.paymentView = paymentView;
-        this.loanInfoView = loanInfoView;
-        this.loanApplicationView = loanApplicationView;
-    }
+public class LoanController implements Initializable{
+    private Main application;
     
-    public void submitApplication(String firstName, String lastName, String desiredLoanAmount, String desiredInterest, String bankInfo) {
-        System.out.println("Application submitted");
-    }
+  
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
     
-    public Loan displayLoanInfo(Customer customer, String loanId) {
-        return customer.getLoan(loanId);
     }
-    
-    public void submitPayment(Customer customer, Double amount, String loanId) {
-        customer.getLoan(loanId).makePayment(amount);
+      
+        public void setApp(Main application){
+        this.application = application;
     }
         
+    public void apply()
+    {
+    // this is when the user hits the apply button
+    }
 }
