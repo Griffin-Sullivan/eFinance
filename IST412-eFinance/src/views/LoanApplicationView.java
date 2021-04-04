@@ -6,7 +6,7 @@
 package views;
 
 import controllers.LoanController;
-import models.Loans;
+import models.Loan;
 import models.Customer;
 import models.LoanApplicationObject;
 import javax.swing.JButton;
