@@ -29,10 +29,10 @@ public class LoanApplicationView {
         loanController.submitApplication(firstNameField.getText(), lastNameField.getText(),
                 desiredLoanAmountField.getText(), desiredInterestField.getText(), bankInfoField.getText());
  
-                LoanApplication(customer, loan);
+                LoanApplicationObject(customer, loan);
     }
 
-    public LoanApplication(Customer customer, Loan loan) {
+    public LoanApplicationObject(Customer customer, Loan loan) {
 
         this.customer = customer;
         this.loan = loan;
