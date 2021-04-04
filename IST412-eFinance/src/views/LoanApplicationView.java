@@ -8,7 +8,7 @@ package views;
 import controllers.LoanController;
 import models.Loans;
 import models.Customer;
-import models.LoanApplication;
+import models.LoanApplicationObject;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
