@@ -6,6 +6,9 @@
 package views;
 
 import controllers.LoanController;
+import models.Loans;
+import models.Customer;
+import models.LoanApplication;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
@@ -25,6 +28,14 @@ public class LoanApplicationView {
     public void submitApplication() {
         loanController.submitApplication(firstNameField.getText(), lastNameField.getText(),
                 desiredLoanAmountField.getText(), desiredInterestField.getText(), bankInfoField.getText());
+ 
+                LoanApplication(customer, loan);
+    }
+
+    public LoanApplication(Customer customer, Loan loan) {
+
+        this.customer = customer;
+        this.loan = loan;
     }
     
     
