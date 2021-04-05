@@ -3,12 +3,12 @@ package models;
 import models.Customer;
 import models.Loan;
 
-public class LoanApplicationObject {
+public class LoanApplication {
 
     private Customer customer;
     private Loan loan;
     
-    public LoanApplicationObject(Customer customer, Loan loan){
+    public LoanApplication(Customer customer, Loan loan){
 
         this.customer = customer;
         this.loan = loan;
