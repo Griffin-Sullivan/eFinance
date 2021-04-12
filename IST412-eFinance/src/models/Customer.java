@@ -21,6 +21,7 @@ public class Customer {
      * @param age The customer's age
      * @param email The customer's email
      * @param password The customer's password
+     * @param bank
     */
     public Customer(String firstName, String lastName, int age, String email, String password, ATZFinance bank) {
         this.firstName = firstName;
@@ -32,41 +33,50 @@ public class Customer {
     }
     
     /** Gets customer's first name
+     * @return 
     */
     public String getFirstName() {
         return firstName;
     }
     
     /** Gets customer's last name
+     * @return 
     */
     public String getLastName() {
         return lastName;
     }
     
     /** Gets customer's age
+     * @return 
     */
     public int getAge() {
         return age;
     }
     
     /** Gets customer's Social Security number
+     * @return 
     */
     public int getSsn() {
         return ssn;
     }
     
     /** Gets customer's income
+     * @return 
     */
     public double getIncome() {
         return income;
     }
     
     /** Gets customer's email
+     * @return 
     */
     public String getEmail() {
         return email;
     }
     
+    /** Gets customer's password
+     * @return 
+    */
     public String getPassword(){
         return password;
     }
