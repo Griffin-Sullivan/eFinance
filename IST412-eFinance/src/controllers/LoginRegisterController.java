@@ -47,4 +47,8 @@ public class LoginRegisterController implements Initializable{
             application.goToCustomerDashboard();
         }
     }
+    
+    public void goToEmployee() {
+        application.goToEmployeeDashboard();
+    }
 }

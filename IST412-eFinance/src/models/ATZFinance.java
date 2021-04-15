@@ -6,6 +6,7 @@
 package models;
 
 import java.util.HashMap;
+import java.util.UUID;
 
 /**
  *
@@ -17,8 +18,8 @@ public class ATZFinance {
     private static ATZFinance single_instance=null;
     private final FederalReserve federalReserve;
     private final HashMap<String, Double> currencyExchange;
-    private HashMap<String,Loan> loans;
-    private HashMap<String,LoanApplication> applications;
+    private HashMap<UUID,Loan> loans;
+    private HashMap<UUID,LoanApplication> applications = new HashMap<UUID,LoanApplication>();
     private Customer testUser;
     
 
@@ -41,18 +42,18 @@ public class ATZFinance {
     }
     
     public void addTestLoans() {
-        loans.put("123", new Loan(10000.00, "joe", "shmoe", "123", 4.5));
+        //loans.put("123", new Loan(10000.00, "joe", "shmoe", "123", 4.5));
     }
     
-    public Loan getLoan(String id) {
+    public Loan getLoan(UUID id) {
         return loans.get(id);
     }
     
-    public LoanApplication getLoanApplication(String id) {
+    public LoanApplication getLoanApplication(UUID id) {
         return applications.get(id);
     }
     
-    public void addLoanApplication(LoanApplication application) {
-        applications.put(application.getApplicationId(), application);
+    public void addLoanApplication(UUID applicationId, LoanApplication application) {
+        applications.put(applicationId, application);
     }
 }

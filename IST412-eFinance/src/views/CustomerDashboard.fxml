@@ -4,11 +4,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="controllers.DashboardController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DashboardController">
    <children>
       <Text layoutX="242.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Dashboard" />
-      <Button fx:id="applyButton" layoutX="117.0" layoutY="173.0" mnemonicParsing="false" text="Apply" onAction="#apply" />
+      <Button fx:id="applyButton" layoutX="117.0" layoutY="173.0" mnemonicParsing="false" onAction="#apply" text="Apply" />
       <Text layoutX="86.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apply for a loan today!" />
+      <Button fx:id="logoutButton" layoutX="36.0" layoutY="41.0" mnemonicParsing="false" onAction="#logOut" text="Log Out" />
    </children>
 </AnchorPane>

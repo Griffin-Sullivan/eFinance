@@ -36,4 +36,8 @@ public class DashboardController implements Initializable {
     public void apply() {
         application.goToLoanApplicationView();
     }
+    
+    public void logOut() {
+        application.goToStart();
+    }
 }

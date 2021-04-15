@@ -9,12 +9,14 @@ import eFinance.Main;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.UUID;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import models.ATZFinance;
 import models.LoanApplication;
 
 /**
@@ -22,6 +24,7 @@ import models.LoanApplication;
  * @author Jared
  */
 public class LoanController implements Initializable {
+    ATZFinance bank = ATZFinance.getInstance();
 
     private Main application;
 
@@ -77,7 +80,7 @@ public class LoanController implements Initializable {
         double loanAmntA = Double.parseDouble(loanAmnt.getText());
         
         LoanApplication newLoan = new LoanApplication(fName,lName,incomeA,ssnA,loanAmntA);
-        
-        System.out.println(newLoan.getAll());
+        bank.addLoanApplication(newLoan.getApplicationId(), newLoan);
+        application.goToCustomerDashboard();
     }
 }

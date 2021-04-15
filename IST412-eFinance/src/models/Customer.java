@@ -1,6 +1,8 @@
 
 package models;
 
+import java.util.UUID;
+
 /** Represents a customer
  * @author Griffin Sullivan
 */
@@ -123,7 +125,7 @@ public class Customer {
         return true;
     }
     
-    public Loan getLoan(String loanId) {
+    public Loan getLoan(UUID loanId) {
         return bank.getLoan(loanId);
     }
 }
