@@ -3,6 +3,7 @@ package eFinance;
 import controllers.DashboardController;
 import controllers.LoanController;
 import controllers.EmployeeDashboardController;
+import controllers.LoanApproveController;
 import controllers.LoginRegisterController;
 import java.io.InputStream;
 import java.util.logging.Level;
@@ -76,8 +77,8 @@ public class Main extends Application{
     public void goToLoanApplicationView()
     {
         try {
-            EmployeeDashboardController dashboard = (EmployeeDashboardController) replaceSceneContent("../views/LoanApplicationView.fxml");
-            dashboard.setApp(this);
+            LoanController loan = (LoanController) replaceSceneContent("../views/LoanApplicationView.fxml");
+            loan.setApp(this);
         } catch (Exception ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -93,11 +94,11 @@ public class Main extends Application{
         }
     }
     
-        public void goToLoanApproveView()
+    public void goToLoanApproveView()
     {
         try {
-            EmployeeDashboardController dashboard = (EmployeeDashboardController) replaceSceneContent("../views/LoanApproveView.fxml");
-            dashboard.setApp(this);
+            LoanApproveController approve = (LoanApproveController) replaceSceneContent("../views/LoanApproveView.fxml");
+            approve.setApp(this);
         } catch (Exception ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }

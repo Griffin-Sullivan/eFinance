@@ -1,6 +1,8 @@
 
 package models;
 
+import java.util.UUID;
+
 /**
  *
  * @author griffinsully
@@ -9,10 +11,10 @@ public class Loan {
     private Double loanAmount;
     private String firstName;
     private String lastName;
-    private String id;
+    private UUID id;
     private Double interestRate;
 
-    public Loan(Double loanAmount, String firstName, String lastName, String id, Double interestRate) {
+    public Loan(Double loanAmount, String firstName, String lastName, UUID id, Double interestRate) {
         this.loanAmount = loanAmount;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -24,7 +26,7 @@ public class Loan {
         return loanAmount;
     }
 
-    public String getId() {
+    public UUID getId() {
         return id;
     }
 

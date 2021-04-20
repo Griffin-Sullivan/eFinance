@@ -6,6 +6,7 @@
 package models;
 
 import java.util.HashMap;
+import java.util.Set;
 import java.util.UUID;
 
 /**
@@ -41,8 +42,17 @@ public class ATZFinance {
         throw new UnsupportedOperationException("Not yet implemented.");
     }
     
-    public void addTestLoans() {
-        //loans.put("123", new Loan(10000.00, "joe", "shmoe", "123", 4.5));
+    public void addTestApplications() {
+        LoanApplication app1 = new LoanApplication("Griffin", "Sullivan", 10000, "123-45-6789", 2000);
+        applications.put(app1.getApplicationId(), app1);
+        LoanApplication app2 = new LoanApplication("Dylan", "Tellei", 13000, "123-45-6888", 5000);
+        applications.put(app2.getApplicationId(), app2);
+        LoanApplication app3 = new LoanApplication("Dutt", "Patel", 15000, "111-35-6789", 200);
+        applications.put(app3.getApplicationId(), app3);
+    }
+    
+    public void addLoan(UUID id, Loan loan) {
+        loans.put(id, loan);
     }
     
     public Loan getLoan(UUID id) {
@@ -55,5 +65,13 @@ public class ATZFinance {
     
     public void addLoanApplication(UUID applicationId, LoanApplication application) {
         applications.put(applicationId, application);
+    }
+    
+    public Set returnLoanApplications() {
+        return applications.keySet();
+    }
+    
+    public void deleteApplication(UUID applicationId) {
+        applications.remove(applicationId);
     }
 }

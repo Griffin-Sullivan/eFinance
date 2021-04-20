@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.UUID;
 import javax.swing.JLabel;
 import models.Customer;
 import models.Loan;
@@ -50,7 +51,7 @@ public class PersonalInfoProfileController {
         return statement;
     }
     
-    public ArrayList<Customer> displayInfo(Customer customer, String loanId){
+    public ArrayList<Customer> displayInfo(Customer customer, UUID loanId){
         ArrayList<Customer> customerInfo = new ArrayList();
         customerInfo.add(customer);
         for(int i = 0; i < customerInfo.size(); i++){
