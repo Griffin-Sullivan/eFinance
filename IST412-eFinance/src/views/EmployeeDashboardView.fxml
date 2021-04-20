@@ -2,10 +2,14 @@
 
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Button?>
 
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="controllers.EmployeeDashboardController">
    <children>
       <Text layoutX="214.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Employee Dashboard" />
+      <Button fx:id="logoutButton" layoutX="36.0" layoutY="41.0" mnemonicParsing="false" onAction="#logOut" text="Log Out" />
+      <Text layoutX="86.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Customer Loan Information" />
+      <Button fx:id="updateButton" layoutX="117.0" layoutY="173.0" mnemonicParsing="false" onAction="#update" text="Update" />
    </children>
 </AnchorPane>

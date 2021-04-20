@@ -66,7 +66,7 @@ public class Main extends Application{
     public void goToEmployeeDashboard()
     {
         try {
-            DashboardController dashboard = (DashboardController) replaceSceneContent("../views/EmployeeDashboardView.fxml");
+            EmployeeDashboardController dashboard = (EmployeeDashboardController) replaceSceneContent("../views/EmployeeDashboardView.fxml");
             dashboard.setApp(this);
         } catch (Exception ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
@@ -77,6 +77,16 @@ public class Main extends Application{
     {
         try {
             EmployeeDashboardController dashboard = (EmployeeDashboardController) replaceSceneContent("../views/LoanApplicationView.fxml");
+            dashboard.setApp(this);
+        } catch (Exception ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void goToLoanUpdateView()
+    {
+        try {
+            EmployeeDashboardController dashboard = (EmployeeDashboardController) replaceSceneContent("../views/UpdateLoanInfoView.fxml");
             dashboard.setApp(this);
         } catch (Exception ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
