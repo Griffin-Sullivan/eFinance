@@ -11,5 +11,7 @@
       <Button fx:id="logoutButton" layoutX="36.0" layoutY="41.0" mnemonicParsing="false" onAction="#logOut" text="Log Out" />
       <Text layoutX="86.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Customer Loan Information" />
       <Button fx:id="updateButton" layoutX="117.0" layoutY="173.0" mnemonicParsing="false" onAction="#update" text="Update" />
+      <Text layoutX="86.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Approve Loans" />
+      <Button fx:id="approveButton" layoutX="117.0" layoutY="273.0" mnemonicParsing="false" onAction="#approve" text="Approve" />
    </children>
 </AnchorPane>

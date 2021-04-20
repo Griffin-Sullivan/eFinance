@@ -45,4 +45,8 @@ public class EmployeeDashboardController implements Initializable {
     public void logOut() {
         application.goToStart();
     }
+    
+    public void approve() {
+        application.goToLoanApproveView();
+    }
 }

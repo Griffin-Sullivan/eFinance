@@ -93,6 +93,16 @@ public class Main extends Application{
         }
     }
     
+        public void goToLoanApproveView()
+    {
+        try {
+            EmployeeDashboardController dashboard = (EmployeeDashboardController) replaceSceneContent("../views/LoanApproveView.fxml");
+            dashboard.setApp(this);
+        } catch (Exception ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
     private Initializable replaceSceneContent(String fxml) throws Exception {
         FXMLLoader loader = new FXMLLoader();
         InputStream in = Main.class.getResourceAsStream(fxml);
