@@ -24,6 +24,7 @@ import models.LoanApplication;
  * @author Jared
  */
 public class LoanController implements Initializable {
+
     ATZFinance bank = ATZFinance.getInstance();
 
     private Main application;
@@ -69,17 +70,17 @@ public class LoanController implements Initializable {
     public void setApp(Main application) {
         this.application = application;
     }
-    
+
     @FXML
-     void apply(ActionEvent event) throws IOException{
+    void apply(ActionEvent event) throws IOException {
         // this is when the user hits the apply button
         String fName = firstName.getText();
         String lName = lastName.getText();
         double incomeA = Double.parseDouble(income.getText());
         String ssnA = ssn.getText();
         double loanAmntA = Double.parseDouble(loanAmnt.getText());
-        
-        LoanApplication newLoan = new LoanApplication(fName,lName,incomeA,ssnA,loanAmntA);
+
+        LoanApplication newLoan = new LoanApplication(fName, lName, incomeA, ssnA, loanAmntA);
         bank.addLoanApplication(newLoan.getApplicationId(), newLoan);
         application.goToCustomerDashboard();
     }

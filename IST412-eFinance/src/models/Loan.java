@@ -25,6 +25,16 @@ public class Loan {
     public Double getLoanAmount() {
         return loanAmount;
     }
+    
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    public int setLoanAmount(int loanAmount) {
+        return loanAmount;
+    }
 
     public UUID getId() {
         return id;

@@ -19,14 +19,13 @@ import models.Loan;
 import views.PersonalInfoView;
 
 public class PersonalInfoProfileController {
-    
+
     private Customer customer;
     private PersonalInfoView profileView;
-    
-    
+
     Customer currentUser;
-    
-    public PersonalInfoProfileController(Customer customer, PersonalInfoView profileView){
+
+    public PersonalInfoProfileController(Customer customer, PersonalInfoView profileView) {
         this.customer = customer;
         this.profileView = profileView;
     }
@@ -50,18 +49,18 @@ public class PersonalInfoProfileController {
         }
         return statement;
     }
-    
-    public ArrayList<Customer> displayInfo(Customer customer, UUID loanId){
+
+    public ArrayList<Customer> displayInfo(Customer customer, UUID loanId) {
         ArrayList<Customer> customerInfo = new ArrayList();
         customerInfo.add(customer);
-        for(int i = 0; i < customerInfo.size(); i++){
-            System.out.println("FirstName: " + customer.getFirstName() 
-                               +"\nLast Name: " + customer.getLastName()
-                               +"\nEmail: " + customer.getEmail()
-                               +"\nSSN: " + customer.getSsn()
-                               +"\nIncome: " + customer.getIncome()
-                               +"\nLoan: " + customer.getLoan(loanId));
-        } 
+        for (int i = 0; i < customerInfo.size(); i++) {
+            System.out.println("FirstName: " + customer.getFirstName()
+                    + "\nLast Name: " + customer.getLastName()
+                    + "\nEmail: " + customer.getEmail()
+                    + "\nSSN: " + customer.getSsn()
+                    + "\nIncome: " + customer.getIncome()
+                    + "\nLoan: " + customer.getLoan(loanId));
+        }
         return customerInfo;
         // Add styling
     }
@@ -71,7 +70,7 @@ public class PersonalInfoProfileController {
 
         Scanner scanner = new Scanner(System.in);
         customer.setEmail(scanner.nextLine());
-        
+
         return customer.getEmail();
     }
 
@@ -80,16 +79,16 @@ public class PersonalInfoProfileController {
 
         Scanner scanner = new Scanner(System.in);
         customer.setPassword(scanner.nextLine());
-        
+
         return customer.getPassword();
     }
-    
-    public int updateSSN(){
+
+    public int updateSSN() {
         System.out.println("Enter SSN.");
 
         Scanner scanner = new Scanner(System.in);
         customer.setSsn(scanner.nextInt());
-        
+
         return customer.getSsn();
     }
 

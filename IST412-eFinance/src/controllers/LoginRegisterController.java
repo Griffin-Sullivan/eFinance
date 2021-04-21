@@ -8,9 +8,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
-public class LoginRegisterController implements Initializable{
+public class LoginRegisterController implements Initializable {
+
     private Main application;
-    
+
     @FXML
     TextField username;
     @FXML
@@ -19,14 +20,13 @@ public class LoginRegisterController implements Initializable{
     Text usernameHelp;
     @FXML
     Text passwordHelp;
-    
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
-    
-    public void setApp(Main application){
+
+    public void setApp(Main application) {
         this.application = application;
     }
 
@@ -47,7 +47,7 @@ public class LoginRegisterController implements Initializable{
             application.goToCustomerDashboard();
         }
     }
-    
+
     public void goToEmployee() {
         application.goToEmployeeDashboard();
     }
