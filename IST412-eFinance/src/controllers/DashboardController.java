@@ -27,17 +27,20 @@ public class DashboardController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
     }
     
+    // sets the application screen to passed value
     public void setApp(Main application){
         this.application = application;
     }
     
+    // navigation - navigate to loan application view
     public void apply() {
         application.goToLoanApplicationView();
     }
     
+    // log out user
     public void logOut() {
         application.goToStart();
     }

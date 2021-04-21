@@ -15,33 +15,30 @@ import java.util.UUID;
  * @author Dutt
  */
 public class ATZFinance {
-    
-    private static ATZFinance single_instance=null;
-    private final FederalReserve federalReserve;
-    private final HashMap<String, Double> currencyExchange;
-    private HashMap<UUID,Loan> loans;
-    private HashMap<UUID,LoanApplication> applications = new HashMap<UUID,LoanApplication>();
-    private Customer testUser;
-    
 
+    private static ATZFinance single_instance = null;
+    private final HashMap<String, Double> currencyExchange;
+    private HashMap<UUID, Loan> loans;
+    private HashMap<UUID, LoanApplication> applications = new HashMap<UUID, LoanApplication>();
+    private Customer testUser;
+
+    // constructor
     private ATZFinance() {
-        federalReserve = new FederalReserve();
+
         currencyExchange = new HashMap<>();
         loans = new HashMap<>();
     }
     
-    public static ATZFinance getInstance() 
-    { 
-        if (single_instance == null) 
-            single_instance = new ATZFinance(); 
-  
-        return single_instance; 
-    } 
-    
-    public double getMaximumLoanAmount() {
-        throw new UnsupportedOperationException("Not yet implemented.");
+    // get method - returns instance of atz class
+    public static ATZFinance getInstance() {
+        if (single_instance == null) {
+            single_instance = new ATZFinance();
+        }
+
+        return single_instance;
     }
     
+    // Test Values to run application for demo
     public void addTestApplications() {
         LoanApplication app1 = new LoanApplication("Griffin", "Sullivan", 10000, "123-45-6789", 2000);
         applications.put(app1.getApplicationId(), app1);
@@ -51,26 +48,32 @@ public class ATZFinance {
         applications.put(app3.getApplicationId(), app3);
     }
     
+    // add loan method
     public void addLoan(UUID id, Loan loan) {
         loans.put(id, loan);
     }
     
+    // get method - returns loan at id
     public Loan getLoan(UUID id) {
         return loans.get(id);
     }
     
+    // get method - returns loan application at id
     public LoanApplication getLoanApplication(UUID id) {
         return applications.get(id);
     }
     
+    // add loan application method - creates loan application using passed params
     public void addLoanApplication(UUID applicationId, LoanApplication application) {
         applications.put(applicationId, application);
     }
-    
+
+    // returns key for loan application
     public Set returnLoanApplications() {
         return applications.keySet();
     }
     
+    // delete method - deletes loan application
     public void deleteApplication(UUID applicationId) {
         applications.remove(applicationId);
     }

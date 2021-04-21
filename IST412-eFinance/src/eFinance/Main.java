@@ -44,6 +44,7 @@ public class Main extends Application{
         Application.launch(Main.class, (java.lang.String[])null);
     }
     
+    // sets the application view to selected FXML view
     public void goToStart() 
     {
         try {
@@ -54,6 +55,7 @@ public class Main extends Application{
         }
     }
     
+    // sets the application view to selected FXML view
     public void goToCustomerDashboard() 
     {
         try {
@@ -64,6 +66,7 @@ public class Main extends Application{
         }
     }
     
+    // sets the application view to selected FXML view
     public void goToEmployeeDashboard()
     {
         try {
@@ -74,6 +77,7 @@ public class Main extends Application{
         }
     }
     
+    // sets the application view to selected FXML view
     public void goToLoanApplicationView()
     {
         try {
@@ -84,6 +88,7 @@ public class Main extends Application{
         }
     }
     
+    // sets the application view to selected FXML view
     public void goToLoanUpdateView()
     {
         try {
@@ -94,6 +99,7 @@ public class Main extends Application{
         }
     }
     
+    // sets the application view to selected FXML view
     public void goToLoanApproveView()
     {
         try {
@@ -104,6 +110,7 @@ public class Main extends Application{
         }
     }
     
+    // FXML scene creator
     private Initializable replaceSceneContent(String fxml) throws Exception {
         FXMLLoader loader = new FXMLLoader();
         InputStream in = Main.class.getResourceAsStream(fxml);
@@ -115,7 +122,7 @@ public class Main extends Application{
         } finally {
             in.close();
         } 
-        Scene scene = new Scene(page, 800, 600);
+        Scene scene = new Scene(page);
         stage.setScene(scene);
         stage.sizeToScene();
         return (Initializable) loader.getController();

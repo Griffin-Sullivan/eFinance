@@ -66,11 +66,13 @@ public class LoanController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
     }
-
+    
+    // sets the application view to passed value
     public void setApp(Main application) {
         this.application = application;
     }
 
+    // FXML for apply button
     @FXML
     void apply(ActionEvent event) throws IOException {
         // this is when the user hits the apply button

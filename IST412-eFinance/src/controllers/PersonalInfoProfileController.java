@@ -16,31 +16,28 @@ import java.util.UUID;
 import javax.swing.JLabel;
 import models.Customer;
 import models.Loan;
-import views.PersonalInfoView;
+
 
 public class PersonalInfoProfileController {
 
     private Customer customer;
-    private PersonalInfoView profileView;
+    
 
     Customer currentUser;
-
-    public PersonalInfoProfileController(Customer customer, PersonalInfoView profileView) {
+    
+    // constructor
+    public PersonalInfoProfileController(Customer customer) {
         this.customer = customer;
-        this.profileView = profileView;
+        
     }
-
+    
+    // initialize customer data - authentication
     public void initData(Customer customer) {
         currentUser = customer;
 
     }
-
-    public void signOut(ActionEvent event) throws IOException {
-        /*
-            On button click, user sign out
-         */
-    }
-
+    
+    // takes passed data and creates an arrayList - returns statement
     public ArrayList<Object> viewStatement(Customer customer, Loan loan) {
         ArrayList<Object> statement = new ArrayList();
         for (int i = 0; i < statement.size(); i++) {
@@ -49,7 +46,8 @@ public class PersonalInfoProfileController {
         }
         return statement;
     }
-
+    
+    // takes passed data and creates an ArrayList - returns customer Info
     public ArrayList<Customer> displayInfo(Customer customer, UUID loanId) {
         ArrayList<Customer> customerInfo = new ArrayList();
         customerInfo.add(customer);
@@ -62,9 +60,9 @@ public class PersonalInfoProfileController {
                     + "\nLoan: " + customer.getLoan(loanId));
         }
         return customerInfo;
-        // Add styling
     }
-
+    
+    // returns email
     public String updateEmail() {
         System.out.println("Enter New Email.");
 
@@ -73,7 +71,8 @@ public class PersonalInfoProfileController {
 
         return customer.getEmail();
     }
-
+    
+    //update password
     public String updatePassword() {
         System.out.println("Enter New Password.");
 
@@ -82,7 +81,8 @@ public class PersonalInfoProfileController {
 
         return customer.getPassword();
     }
-
+    
+    // update ssn
     public int updateSSN() {
         System.out.println("Enter SSN.");
 

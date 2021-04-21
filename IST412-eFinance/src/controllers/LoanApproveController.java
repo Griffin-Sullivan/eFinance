@@ -53,7 +53,8 @@ public class LoanApproveController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
     }
-
+    
+    // sets the application view to passed values
     public void setApp(Main application) {
         this.application = application;
         applicationSet = bank.returnLoanApplications();
@@ -72,6 +73,7 @@ public class LoanApproveController implements Initializable {
         amount.setText("Amount: $" + loanApplication.getDesiredLoanAmount());
     }
     
+    // FXML for approve button
     @FXML
     public void approve() {
         LoanApplication loanApplication = bank.getLoanApplication(applicationIds.get(this.currentIndex));
@@ -83,6 +85,7 @@ public class LoanApproveController implements Initializable {
         next();
     }
     
+    // FXML for decline button
     @FXML
     public void decline() {
         LoanApplication loanApplication = bank.getLoanApplication(applicationIds.get(this.currentIndex));
@@ -92,6 +95,7 @@ public class LoanApproveController implements Initializable {
         next();
     }
     
+    //FXML for next button
     @FXML
     public void next() {
         if (applicationIds.isEmpty()) {

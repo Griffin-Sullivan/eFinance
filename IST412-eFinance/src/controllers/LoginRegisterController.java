@@ -23,17 +23,20 @@ public class LoginRegisterController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
     }
-
+    
+    // set the application view to passed value
     public void setApp(Main application) {
         this.application = application;
     }
-
+    
+    // take in user input and create new customer
     public void addNewCustomer(String email, String password, String firstName, String lastName, int age) {
         System.out.println("Registration successful! New customer added. " + firstName + lastName + age + email + password);
     }
-
+    
+    // authenticates login credentials 
     public void authenticate() {
         if (!username.getText().equals("username")) {
             usernameHelp.setText("Invalid username");
@@ -47,7 +50,8 @@ public class LoginRegisterController implements Initializable {
             application.goToCustomerDashboard();
         }
     }
-
+    
+    // navigation - navigate to employee dashboard
     public void goToEmployee() {
         application.goToEmployeeDashboard();
     }

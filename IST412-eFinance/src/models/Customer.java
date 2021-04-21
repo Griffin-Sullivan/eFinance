@@ -7,15 +7,15 @@ import java.util.UUID;
  * @author Griffin Sullivan
 */
 public class Customer {
-    private String firstName;
-    private String lastName;
-    private int age;
+    private final String firstName;
+    private final String lastName;
+    private final int age;
     private int ssn;
     private double income;
     private Loan loan;
     private String email;
     private String password;
-    private ATZFinance bank;
+    private final ATZFinance bank;
 
     /** Creates a new customer
      * @param firstName The customer's first name
@@ -125,6 +125,7 @@ public class Customer {
         return true;
     }
     
+    // get method - returns loan info
     public Loan getLoan(UUID loanId) {
         return bank.getLoan(loanId);
     }
