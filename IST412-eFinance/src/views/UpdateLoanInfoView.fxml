@@ -1,11 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1">
-    
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="514.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controllers.LoanController">
+   <children>
+      <VBox layoutX="60.0" layoutY="45.0" prefHeight="196.0" prefWidth="238.0" spacing="15.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Loan Application" wrappingWidth="113.96875" />
+            <HBox prefHeight="24.0" prefWidth="252.0" spacing="22.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="First name:" />
+                  <TextField fx:id="firstNameField" />
+               </children>
+            </HBox>
+            <HBox prefHeight="24.0" prefWidth="252.0" spacing="22.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Last name:" />
+                  <TextField fx:id="lastNameField" />
+               </children>
+            </HBox>
+            <HBox prefHeight="24.0" prefWidth="252.0" spacing="54.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SSN:" />
+                  <TextField fx:id="ssnField" />
+               </children>
+            </HBox>
+            <HBox prefHeight="24.0" prefWidth="252.0" spacing="38.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Income:" />
+                  <TextField fx:id="incomeField" />
+               </children>
+            </HBox>
+            <HBox prefHeight="24.0" prefWidth="252.0" spacing="7.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Loan Amount:" />
+                  <TextField fx:id="loanAmountField" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="10.0" top="20.0" />
+         </padding>
+      </VBox>
+      <HBox layoutX="184.0" layoutY="318.0" prefHeight="47.0" prefWidth="114.0" spacing="20.0">
+         <children>
+            <Button fx:id="nextButton" mnemonicParsing="false" onAction="#next" text="Next" />
+            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#save" text="Save" />
+         </children>
+      </HBox>
+   </children>
 </AnchorPane>

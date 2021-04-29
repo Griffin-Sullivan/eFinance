@@ -92,7 +92,7 @@ public class Main extends Application{
     public void goToLoanUpdateView()
     {
         try {
-            EmployeeDashboardController dashboard = (EmployeeDashboardController) replaceSceneContent("../views/UpdateLoanInfoView.fxml");
+            LoanController dashboard = (LoanController) replaceSceneContent("../views/UpdateLoanInfoView.fxml");
             dashboard.setApp(this);
         } catch (Exception ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
