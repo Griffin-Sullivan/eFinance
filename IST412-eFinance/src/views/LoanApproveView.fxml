@@ -5,29 +5,60 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="514.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoanApproveController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoanApproveController">
    <children>
-      <VBox layoutY="-2.0" prefHeight="264.0" prefWidth="510.0" spacing="15.0">
+      <VBox layoutY="-2.0" prefHeight="300.0" prefWidth="600.0" spacing="15.0">
          <children>
-            <Text fx:id="title" strokeType="OUTSIDE" strokeWidth="0.0" text="Loan Application for " wrappingWidth="277.69036865234375" />
-            <Text fx:id="firstName" strokeType="OUTSIDE" strokeWidth="0.0" text="First name:" />
-            <Text fx:id="lastName" strokeType="OUTSIDE" strokeWidth="0.0" text="Last name:" />
-            <Text fx:id="ssn" strokeType="OUTSIDE" strokeWidth="0.0" text="SSN:" />
-            <Text fx:id="income" strokeType="OUTSIDE" strokeWidth="0.0" text="Income:" />
-            <Text fx:id="amount" strokeType="OUTSIDE" strokeWidth="0.0" text="Loan Amount:" />
+            <Text fx:id="title" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="LOAN APPLICATION FOR:" wrappingWidth="500.0">
+               <font>
+                  <Font size="20.0" />
+               </font></Text>
+            <Text fx:id="firstName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="FIRST NAME:">
+               <font>
+                  <Font size="20.0" />
+               </font></Text>
+            <Text fx:id="lastName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="LAST NAME:">
+               <font>
+                  <Font size="20.0" />
+               </font></Text>
+            <Text fx:id="ssn" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="SSN:">
+               <font>
+                  <Font size="20.0" />
+               </font></Text>
+            <Text fx:id="income" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="INCOME:">
+               <font>
+                  <Font size="20.0" />
+               </font></Text>
+            <Text fx:id="amount" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="LOAN AMOUNT:">
+               <font>
+                  <Font size="20.0" />
+               </font></Text>
          </children>
          <padding>
-            <Insets left="70.0" top="60.0" />
+            <Insets left="70.0" top="45.0" />
          </padding>
       </VBox>
-      <HBox alignment="CENTER" layoutX="1.0" layoutY="262.0" prefHeight="136.0" prefWidth="504.0" spacing="20.0">
+      <HBox alignment="CENTER" layoutY="298.0" prefHeight="100.0" prefWidth="600.0" spacing="20.0">
          <children>
-            <Button mnemonicParsing="false" text="Exit" onAction="#exit" />
-            <Button mnemonicParsing="false" onAction="#approve" text="Approve" />
-            <Button mnemonicParsing="false" onAction="#decline" text="Decline" />
-            <Button mnemonicParsing="false" onAction="#next" text="Next" />
+            <Button mnemonicParsing="false" onAction="#exit" style="-fx-background-color: none; -fx-border-color: white;" text="E X I T" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#approve" style="-fx-background-color: none; -fx-border-color: white;" text="A P P R O V E" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#decline" style="-fx-background-color: none; -fx-border-color: white;" text="D E C L I N E" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#next" style="-fx-background-color: none; -fx-border-color: white;" text="N E X T" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
          </children>
       </HBox>
    </children>

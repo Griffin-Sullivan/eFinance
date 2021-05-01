@@ -34,7 +34,7 @@ public class PayLoanController implements Initializable {
     public void setApp(Main application) {
         this.application = application;
         loanTotal = bank.getCurrentUserTotal();
-        total.setText("Total: $" + loanTotal);
+        total.setText("TOTAL:  $" + loanTotal);
     }
     
     @Override
@@ -50,6 +50,6 @@ public class PayLoanController implements Initializable {
         double amountPaid = Double.valueOf(payment.getText());
         loanTotal = loanTotal - amountPaid;
         bank.setCurrentUserTotal(loanTotal);
-        total.setText("Total: $" + loanTotal);
+        total.setText("TOTAL:  $" + loanTotal);
     }
 }

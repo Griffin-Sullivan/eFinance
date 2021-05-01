@@ -9,51 +9,88 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="448.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoanController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoanController">
    <children>
-      <Text layoutX="84.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loan Application " textAlignment="CENTER" wrappingWidth="288.13671875">
+      <Text fill="WHITE" layoutX="156.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loan Application " textAlignment="CENTER" wrappingWidth="288.13671875">
          <font>
-            <Font size="28.0" />
+            <Font name="Segoe UI Bold" size="30.0" />
          </font>
       </Text>
-      <Button fx:id="applyBtn" layoutX="121.0" layoutY="322.0" mnemonicParsing="false" onAction="#apply" prefHeight="26.0" prefWidth="83.0" text="Apply" />
-      <VBox layoutY="70.0" prefHeight="252.0" prefWidth="457.0">
+      <VBox alignment="CENTER" layoutY="74.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="325.0" prefWidth="600.0">
          <children>
-            <HBox prefHeight="50.0" prefWidth="100.0" spacing="10.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Text fx:id="fNameLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name" wrappingWidth="83.4761962890625" />
-                  <TextField fx:id="firstName" promptText="Enter First Name" />
+                  <Text fx:id="fNameLabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="FIRST NAME" wrappingWidth="175.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Text>
+                  <TextField fx:id="firstName" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" promptText="Enter First Name" style="-fx-background-color: grey; -fx-border-color: white;">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
                </children>
             </HBox>
-            <HBox prefHeight="50.0" prefWidth="100.0" spacing="10.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Text fx:id="lNameLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" wrappingWidth="87.892578125" />
-                  <TextField fx:id="lastName" promptText="Enter Last Name" />
+                  <Text fx:id="lNameLabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="LAST NAME" wrappingWidth="175.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Text>
+                  <TextField fx:id="lastName" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" promptText="Enter Last Name" style="-fx-background-color: grey; -fx-border-color: white;">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
                </children>
             </HBox>
-            <HBox prefHeight="50.0" prefWidth="100.0" spacing="10.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Text fx:id="incomeLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="Income" wrappingWidth="89.56991577148438" />
-                  <TextField fx:id="income" promptText="Enter Income" />
+                  <Text fx:id="incomeLabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="INCOME" wrappingWidth="175.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Text>
+                  <TextField fx:id="income" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" promptText="Enter Income" style="-fx-background-color: grey; -fx-border-color: white;">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
                </children>
             </HBox>
-            <HBox prefHeight="50.0" prefWidth="100.0" spacing="10.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Text fx:id="ssnLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="SSN" wrappingWidth="88.92657470703125" />
-                  <TextField fx:id="ssn" promptText="Enter SSN" />
+                  <Text fx:id="ssnLabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="SSN" wrappingWidth="175.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Text>
+                  <TextField fx:id="ssn" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" promptText="Enter SSN" style="-fx-background-color: grey; -fx-border-color: white;">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
                </children>
             </HBox>
-            <HBox prefHeight="50.0" prefWidth="200.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Text fx:id="loanAmntLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="Loan Amount" wrappingWidth="100.419189453125" />
-                  <TextField fx:id="loanAmnt" promptText="Enter Loan Amount" />
+                  <Text fx:id="loanAmntLabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="LOAN AMOUNT" wrappingWidth="175.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Text>
+                  <TextField fx:id="loanAmnt" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" promptText="Enter Loan Amount" style="-fx-background-color: grey; -fx-border-color: white;">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
                </children>
             </HBox>
+            <Button fx:id="applyBtn" alignment="CENTER" mnemonicParsing="false" onAction="#apply" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: none; -fx-border-color: white;" text="A P P L Y" textFill="WHITE" translateY="10.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
          </children>
          <padding>
-            <Insets left="20.0" top="10.0" />
+            <Insets left="30.0" />
          </padding>
       </VBox>
-      <Button layoutX="29.0" layoutY="20.0" mnemonicParsing="false" text="Back" onAction="#goToCustomerDashboard" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToCustomerDashboard" style="-fx-background-color: none; -fx-border-color: white;" text="B A C K" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
    </children>
 </AnchorPane>

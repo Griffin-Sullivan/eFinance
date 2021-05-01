@@ -6,54 +6,103 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="514.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoanController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoanController">
    <children>
-      <VBox layoutX="60.0" layoutY="45.0" prefHeight="196.0" prefWidth="238.0" spacing="15.0">
+      <VBox alignment="CENTER" layoutX="-1.0" layoutY="74.0" prefHeight="325.0" prefWidth="600.0" spacing="15.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Loan Application" wrappingWidth="113.96875" />
-            <HBox prefHeight="24.0" prefWidth="252.0" spacing="22.0">
+            <HBox prefHeight="24.0" prefWidth="252.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="First name:" />
-                  <TextField fx:id="firstNameField" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="FIRST NAME:" wrappingWidth="200.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Text>
+                  <TextField fx:id="firstNameField" prefWidth="200.0" promptText="First Name" style="-fx-background-color: grey; -fx-border-color: white;">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
                </children>
             </HBox>
-            <HBox prefHeight="24.0" prefWidth="252.0" spacing="22.0">
+            <HBox prefHeight="24.0" prefWidth="252.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Last name:" />
-                  <TextField fx:id="lastNameField" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="LAST NAME:" wrappingWidth="200.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Text>
+                  <TextField fx:id="lastNameField" prefWidth="200.0" promptText="Last Name" style="-fx-background-color: grey; -fx-border-color: white;">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
                </children>
             </HBox>
-            <HBox prefHeight="24.0" prefWidth="252.0" spacing="54.0">
+            <HBox prefHeight="24.0" prefWidth="252.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SSN:" />
-                  <TextField fx:id="ssnField" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="SSN:" wrappingWidth="200.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Text>
+                  <TextField fx:id="ssnField" prefWidth="200.0" promptText="SSN" style="-fx-background-color: grey; -fx-border-color: white;">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
                </children>
             </HBox>
-            <HBox prefHeight="24.0" prefWidth="252.0" spacing="38.0">
+            <HBox prefHeight="24.0" prefWidth="252.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Income:" />
-                  <TextField fx:id="incomeField" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="INCOME:" wrappingWidth="200.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Text>
+                  <TextField fx:id="incomeField" prefWidth="200.0" promptText="Income" style="-fx-background-color: grey; -fx-border-color: white;">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
                </children>
             </HBox>
-            <HBox prefHeight="24.0" prefWidth="252.0" spacing="7.0">
+            <HBox prefHeight="24.0" prefWidth="252.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Loan Amount:" />
-                  <TextField fx:id="loanAmountField" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="LOAN AMOUNT:" wrappingWidth="200.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Text>
+                  <TextField fx:id="loanAmountField" prefWidth="200.0" promptText="Loan Amount" style="-fx-background-color: grey; -fx-border-color: white;">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
                </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="47.0" prefWidth="200.0" spacing="66.0">
+               <children>
+                  <Button fx:id="nextButton" mnemonicParsing="false" onAction="#next" style="-fx-background-color: none; -fx-border-color: white;" text="N E X T" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="saveButton" mnemonicParsing="false" onAction="#save" style="-fx-background-color: none; -fx-border-color: white;" text="S A V E" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="32.0" />
+               </padding>
             </HBox>
          </children>
          <padding>
-            <Insets left="10.0" top="20.0" />
+            <Insets left="30.0" />
          </padding>
       </VBox>
-      <HBox layoutX="184.0" layoutY="318.0" prefHeight="47.0" prefWidth="114.0" spacing="20.0">
-         <children>
-            <Button fx:id="nextButton" mnemonicParsing="false" onAction="#next" text="Next" />
-            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#save" text="Save" />
-         </children>
-      </HBox>
-      <Button layoutX="33.0" layoutY="18.0" mnemonicParsing="false" text="Back" onAction="#goToEmployeeDashboard" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToEmployeeDashboard" style="-fx-background-color: none; -fx-border-color: white;" text="B A C K" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Text fill="WHITE" layoutX="82.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Loan Application" textAlignment="CENTER" wrappingWidth="450.0">
+         <font>
+            <Font name="Segoe UI Bold" size="30.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
