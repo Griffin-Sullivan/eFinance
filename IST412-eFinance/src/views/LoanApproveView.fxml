@@ -24,6 +24,7 @@
       </VBox>
       <HBox alignment="CENTER" layoutX="1.0" layoutY="262.0" prefHeight="136.0" prefWidth="504.0" spacing="20.0">
          <children>
+            <Button mnemonicParsing="false" text="Exit" onAction="#exit" />
             <Button mnemonicParsing="false" onAction="#approve" text="Approve" />
             <Button mnemonicParsing="false" onAction="#decline" text="Decline" />
             <Button mnemonicParsing="false" onAction="#next" text="Next" />

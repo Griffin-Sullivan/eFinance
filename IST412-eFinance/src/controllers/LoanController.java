@@ -123,6 +123,7 @@ public class LoanController implements Initializable {
         double loanAmntA = Double.parseDouble(loanAmnt.getText());
 
         LoanApplication newLoan = new LoanApplication(fName, lName, incomeA, ssnA, loanAmntA);
+        bank.setCurrentUserTotal(loanAmntA);
         bank.addLoanApplication(newLoan.getApplicationId(), newLoan);
         application.goToCustomerDashboard();
     }
@@ -158,5 +159,13 @@ public class LoanController implements Initializable {
         loanApplication.setSsn(ssnField.getText());
         loanApplication.setIncome(Double.valueOf(incomeField.getText()));
         loanApplication.setDesiredLoanAmount(Double.valueOf(loanAmountField.getText()));
+    }
+    
+    public void goToEmployeeDashboard() {
+        application.goToEmployeeDashboard();
+    }
+    
+    public void goToCustomerDashboard() {
+        application.goToCustomerDashboard();
     }
 }

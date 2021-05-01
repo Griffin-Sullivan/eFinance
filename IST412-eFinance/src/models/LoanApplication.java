@@ -7,7 +7,7 @@ import java.util.UUID;
  * @author griffinsully
  */
 public class LoanApplication {
-
+    private ATZFinance bank = ATZFinance.getInstance();
     private String firstName;
     private String lastName;
     private double income;
@@ -92,6 +92,7 @@ public class LoanApplication {
     // set method - set the desired loan amount
     public void setDesiredLoanAmount(double desiredLoanAmount) {
         this.desiredLoanAmount = desiredLoanAmount;
+        bank.setCurrentUserTotal(desiredLoanAmount);
     }
 
     // get method - returns true/false

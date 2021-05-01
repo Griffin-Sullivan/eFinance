@@ -54,5 +54,6 @@
             <Insets left="20.0" top="10.0" />
          </padding>
       </VBox>
+      <Button layoutX="29.0" layoutY="20.0" mnemonicParsing="false" text="Back" onAction="#goToCustomerDashboard" />
    </children>
 </AnchorPane>

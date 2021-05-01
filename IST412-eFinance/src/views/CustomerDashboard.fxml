@@ -10,5 +10,7 @@
       <Button fx:id="applyButton" layoutX="117.0" layoutY="173.0" mnemonicParsing="false" onAction="#apply" text="Apply" />
       <Text layoutX="86.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apply for a loan today!" />
       <Button fx:id="logoutButton" layoutX="36.0" layoutY="41.0" mnemonicParsing="false" onAction="#logOut" text="Log Out" />
+      <Text layoutX="373.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Make a payment!" />
+      <Button fx:id="payButton" layoutX="400.0" layoutY="173.0" mnemonicParsing="false" onAction="#pay" text="Pay" />
    </children>
 </AnchorPane>

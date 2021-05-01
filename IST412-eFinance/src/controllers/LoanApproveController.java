@@ -118,4 +118,8 @@ public class LoanApproveController implements Initializable {
         income.setText("Income: $" + loanApplication.getIncome());
         amount.setText("Amount: $" + loanApplication.getDesiredLoanAmount());
     }
+    
+    public void exit() {
+        application.goToEmployeeDashboard();
+    }
 }

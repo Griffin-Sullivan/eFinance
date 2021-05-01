@@ -21,6 +21,7 @@ public class ATZFinance {
     private HashMap<UUID, Loan> loans;
     private HashMap<UUID, LoanApplication> applications = new HashMap<UUID, LoanApplication>();
     private Customer testUser;
+    private double currentUserTotal;
 
     // constructor
     private ATZFinance() {
@@ -76,5 +77,13 @@ public class ATZFinance {
     // delete method - deletes loan application
     public void deleteApplication(UUID applicationId) {
         applications.remove(applicationId);
+    }
+    
+    public Double getCurrentUserTotal() {
+        return this.currentUserTotal;
+    }
+    
+    public void setCurrentUserTotal(double total) {
+        this.currentUserTotal = total;
     }
 }

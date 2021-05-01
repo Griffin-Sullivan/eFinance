@@ -5,6 +5,7 @@ import controllers.LoanController;
 import controllers.EmployeeDashboardController;
 import controllers.LoanApproveController;
 import controllers.LoginRegisterController;
+import controllers.PayLoanController;
 import java.io.InputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -105,6 +106,16 @@ public class Main extends Application{
         try {
             LoanApproveController approve = (LoanApproveController) replaceSceneContent("../views/LoanApproveView.fxml");
             approve.setApp(this);
+        } catch (Exception ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void goToPayLoanView()
+    {
+        try {
+            PayLoanController pay = (PayLoanController) replaceSceneContent("../views/PayLoanView.fxml");
+            pay.setApp(this);
         } catch (Exception ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
