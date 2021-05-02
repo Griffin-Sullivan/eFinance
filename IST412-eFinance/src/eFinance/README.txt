@@ -5,8 +5,11 @@ When you launch the application use
 Username = "username"
 Password = "password"
 
-Now added use case to approve loans and apply for your own loan. Go to customer login to approve loans. We added 3 test loans for adding the functionality, however you can add your own loan applications under the
-user login.
+Use cases have been completed and include: 
+1. Apply for loans
+2. Approve/Decline applications
+3. Update loans
+4. Pay for loans
 
 Contributions made by Dutt, Dylan, Griffin, and Jared
 
