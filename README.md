@@ -1,9 +1,21 @@
-# IST412-API-Design
-API Design for IST412
+-----README-----
+
+When you launch the application use
+
+Username = "username"
+Password = "password"
+
+Use cases have been completed and include: 
+1. Apply for loans
+2. Approve/Decline applications
+3. Update loans
+4. Pay for loans
+
+Contributions made by Dutt, Dylan, Griffin, and Jared
 
 Refactoring Changes - 4/20/21
 
-1 - Ensured controller seperation and FXML name conventions for each controller was revised and updated.
+1 - Ensured controller separation and FXML name conventions for each controller was revised and updated.
 
 2 - Removed redundant view classes
 
